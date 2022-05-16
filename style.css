@@ -149,6 +149,16 @@ html, body {
 
 }
 
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
 
 
 #logo {
