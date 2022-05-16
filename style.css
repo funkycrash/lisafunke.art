@@ -150,6 +150,7 @@ html, body {
 }
 
 footer {
+    font-size: 12px;
     padding: 20px;
     display: flex;
     justify-content: center;
