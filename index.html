@@ -277,9 +277,7 @@ section {
 <section id="about">
     <div>
         <h1 class="highlight">about me</h1>
-        <p>Hi! My name is Lisa and I'm a french/german animation student at Gobelins. </p>
-        <p>I'm currently interested in character design and background art though I enjoy exploring every aspect of the animation pipeline. When I'm not drawing, I bake huge amounts of cookies or read the cheesiest romance novels you could think of. </p>
-        <p>Thanks for checking out my website :)</p>
+        {{ site.data.content.about | markdownify }}
     </div>
     <div class="picture">
         <img src="/images/picture.png" alt="picture of Lisa Funke"/>
