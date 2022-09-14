@@ -7,6 +7,10 @@ url: "https://www.lisafunke.art" # the base hostname & protocol for your site, e
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Permalink format (/blog/ is ignored for pages)
+permalink: /blog/:title
+
+
 # Build settings
 plugins:
   - jekyll-feed
@@ -34,5 +38,5 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 collections:
-  observations:
+  observation:
     output: false
