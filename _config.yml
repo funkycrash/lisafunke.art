@@ -40,3 +40,7 @@ exclude:
 collections:
   observation:
     output: false
+  animation:
+    output: false
+  visualdevelopment:
+    output: false
