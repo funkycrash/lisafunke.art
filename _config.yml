@@ -36,5 +36,3 @@ exclude:
 collections:
   observations:
     output: false
-  director:
-    output: false
