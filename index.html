@@ -116,6 +116,23 @@ html, body {
   transform: rotate(-405deg);
 }
 
+.grid-container  {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.grid-container div {
+  margin: 2rem;
+  text-align: center;
+  max-width: calc(33.3333% - 2rem);
+  min-width: calc(33.3333% - 2rem);
+}
+
+.grid-container div img {
+  max-width: 70%;
+}
+
 @media (max-width: 700px) {
   .menu-button-container {
     display: flex;
@@ -163,6 +180,13 @@ html, body {
       flex-direction: column;
   }
 
+  .grid-container {
+    flex-direction: column;
+  }
+  .grid-container div, .grid-container div img {
+    max-width: 100%;
+  }
+
 }
 
 footer {
@@ -175,7 +199,6 @@ footer {
 footer a {
     text-decoration: underline;
 }
-
 
 
 #logo {
@@ -207,6 +230,12 @@ section {
 #about img {
     max-width: 300px;
 }
+
+#main div {
+  display: flex;
+}
+
+
     </style>
 </head>
 <body>
@@ -231,6 +260,19 @@ section {
       <li><a href="#about">about</a></li>
     </ul>
 </header>
+
+<section id="main">
+  <div class="grid-container">
+    <div><p>click to discover</p><img src="/images/home/Flèche.png" alt="click to discover" width="80px"/></div>
+  </div>
+  <div class="grid-container">
+    <div><a href="/animation"><img src="/images/home/IconAnim.png" alt="animation"/></a></div>
+    <div><a href="/visual-development"><img src="/images/home/IconVisdev.png" alt="visual development"/></a></div>
+  </div>
+  <div class="grid-container">
+    <div><a href="/observation"><img src="/images/home/IconObs.png" alt="observation"/></a></div>
+  </div>
+</section>
 
 <section id="about">
     <div>

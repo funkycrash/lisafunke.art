@@ -1,0 +1,169 @@
+backend:
+  name: github
+  repo: funkycrash/lisafunke.art
+  branch: master
+media_folder: images/uploads
+webp:
+  enabled: true
+
+  # The quality of the webp conversion 0 to 100 (where 100 is least lossy)
+  quality: 75
+
+  # List of directories containing images to optimize, nested directories will only be checked if `nested` is true
+  # By default the generator will search for a folder called `/img` under the site root and process all jpg, png and tiff image files found there.
+  img_dir: ["/images/uploads"]
+
+  # Whether to search in nested directories or not
+  nested: true
+
+  # add ".gif" to the format list to generate webp for animated gifs as well
+  formats: [".jpeg", ".jpg", ".png"]
+
+  # File extensions for animated gif files 
+  gifs: [".gif"]
+
+  # Set to true to always regenerate existing webp files
+  regenerate: false
+
+  # Local path to the WebP utilities to use (relative or absolute)
+  # Omit or leave as nil to use the utilities shipped with the gem, override only to use your local install
+  webp_path: nil
+
+  # List of files or directories to exclude
+  # e.g. custom or hand generated webp conversion files
+  exclude: []
+
+  # append '.webp' to filename after original extension rather than replacing it.
+  # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
+  append_ext: false
+collections:
+  - name: post
+    label: Blog
+    folder: _posts
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Title, name: title, widget: string, tagname: h1 }
+      - {
+          label: Author,
+          name: author,
+          widget: select,
+          options:
+            [
+              { label: "Matt Barkin", value: matt_barkin },
+              { label: "Nicolas Funke", value: nicolas_funke },
+            ],
+        }
+      - {
+          label: "Publish Date",
+          name: date,
+          widget: datetime,
+          format: "YYYY-MM-DD",
+        }
+      - { label: Body, name: body, widget: markdown, required: false }
+      - {
+          label: Categories,
+          name: categories,
+          widget: select,
+          options:
+            [Vibrant Films production news, Blog, Film news, Talking shop],
+        }
+      - {
+          label: "Thumbnail Image",
+          name: thumbnailImage,
+          description: "must be 480x360",
+          widget: image,
+          default: /assets/img/uploads/default-thumbnail.jpg,
+        }
+  - name: work
+    label: Work
+    folder: _work
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string, tagname: h1 }
+      - {
+          label: Priority,
+          name: priority,
+          widget: number,
+          default: 0,
+          min: 0,
+          max: 1000,
+          step: 1,
+        }
+      - { label: "Vimeo Permalink", name: permalink, widget: string }
+      - {
+          label: Tag,
+          name: tag,
+          widget: select,
+          options: [advertisement, corporate, profile-documentary, reel],
+        }
+      - {
+          label: "Thumbnail Image",
+          name: thumbnailImage,
+          description: "must be 480x360",
+          widget: image,
+          default: /assets/img/uploads/default-thumbnail.jpg,
+        }
+  - label: Content
+    name: content
+    files:
+      - {
+          label: Content,
+          name: content,
+          file: _data/content.yml,
+          fields:
+            [
+              { label: Title, name: title, widget: string },
+              { label: Intro, name: intro, widget: string },
+              { label: "Work Title", name: workTitle, widget: string },
+              { label: "Work Subtitle", name: workSubTitle, widget: string },
+              { label: "Director Title", name: directorTitle, widget: string },
+              {
+                label: "Director Subtitle",
+                name: directorSubTitle,
+                widget: string,
+              },
+              { label: "What We Do", name: whatWeDoTitle, widget: string },
+              {
+                label: "What We Do Subtitle",
+                name: whatWeDoSubTitle,
+                widget: string,
+              },
+              {
+                label: "Who We Are Title",
+                name: whoWeAreTitle,
+                widget: string,
+              },
+              {
+                label: "Who We Are Subtitle",
+                name: whoWeAreSubTitle,
+                widget: string,
+              },
+              { label: "Slideshow Text 1", name: slide1, widget: markdown },
+              { label: "Slideshow Text 2", name: slide2, widget: markdown },
+              { label: "Slideshow Text 3", name: slide3, widget: markdown },
+              { label: "Slideshow Text 4", name: slide4, widget: markdown },
+              { label: "Slideshow Text 5", name: slide5, widget: markdown },
+              { label: "Slideshow Text 6", name: slide6, widget: markdown },
+              { label: "Separator Text", name: SeparatorText, widget: string },
+              {
+                label: "Equipment Rentals Title",
+                name: equipmentRentalsTitle,
+                widget: string,
+              },
+              {
+                label: "Equipment Rentals SubTitle",
+                name: equipmentRentalsSubTitle,
+                widget: string,
+              },
+              { label: "Contact text", name: contactText, widget: string },
+              { label: "Address line 1", name: address1, widget: string },
+              { label: "Address line 2", name: address2, widget: string },
+              { label: "Address line 3", name: address3, widget: string },
+              { label: Phone, name: phone, widget: string },
+              { label: Email, name: email, widget: string },
+            ],
+        }
