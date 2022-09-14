@@ -83,7 +83,7 @@ collections:
         }
   - name: visualdevelopment
     label: "Visual Development"
-    folder: _visual-development
+    folder: _visualdevelopment
     create: true
     slug: "{{slug}}"
     fields:
