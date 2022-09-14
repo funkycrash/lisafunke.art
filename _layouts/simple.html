@@ -262,8 +262,8 @@ section {
 </header>
  
 <section id="main">
-    {% assign observationByPriority = site.observations | sort:"priority" | reverse %} 
-    {% for observation in site.observations %}
+    {% assign observationByPriority = site.observation | sort:"priority" | reverse %} 
+    {% for observation in site.observation %}
         <h1>{{ observation.title }}</h1>
     {% endfor %}
 </section>
