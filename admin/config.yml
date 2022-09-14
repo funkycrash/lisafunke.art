@@ -37,49 +37,9 @@ webp:
   # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
   append_ext: false
 collections:
-  - name: post
-    label: Blog
-    folder: _posts
-    sort: "date:desc"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: Layout, name: layout, widget: hidden, default: post }
-      - { label: Title, name: title, widget: string, tagname: h1 }
-      - {
-          label: Author,
-          name: author,
-          widget: select,
-          options:
-            [
-              { label: "Matt Barkin", value: matt_barkin },
-              { label: "Nicolas Funke", value: nicolas_funke },
-            ],
-        }
-      - {
-          label: "Publish Date",
-          name: date,
-          widget: datetime,
-          format: "YYYY-MM-DD",
-        }
-      - { label: Body, name: body, widget: markdown, required: false }
-      - {
-          label: Categories,
-          name: categories,
-          widget: select,
-          options:
-            [Vibrant Films production news, Blog, Film news, Talking shop],
-        }
-      - {
-          label: "Thumbnail Image",
-          name: thumbnailImage,
-          description: "must be 480x360",
-          widget: image,
-          default: /assets/img/uploads/default-thumbnail.jpg,
-        }
-  - name: work
-    label: Work
-    folder: _work
+  - name: observation
+    label: Observation
+    folder: _observation
     create: true
     slug: "{{slug}}"
     fields:
@@ -93,19 +53,11 @@ collections:
           max: 1000,
           step: 1,
         }
-      - { label: "Vimeo Permalink", name: permalink, widget: string }
-      - {
-          label: Tag,
-          name: tag,
-          widget: select,
-          options: [advertisement, corporate, profile-documentary, reel],
-        }
       - {
           label: "Thumbnail Image",
           name: thumbnailImage,
           description: "must be 480x360",
-          widget: image,
-          default: /assets/img/uploads/default-thumbnail.jpg,
+          widget: image
         }
   - label: Content
     name: content
