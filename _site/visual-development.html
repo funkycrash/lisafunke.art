@@ -18,6 +18,10 @@
 font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+  font-size: 40px;
+}
+
 p, a {
 font-family: 'Comfortaa', cursive;
 }
@@ -44,12 +48,11 @@ box-sizing: border-box;
 
 .top-nav {
 display: flex;
-flex-direction: row;
+flex-direction: column;
 align-items: center;
 justify-content: space-between;
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 color: #1d1d1d;
-height: 50px;
 padding: 1em;
 }
 
@@ -64,6 +67,7 @@ padding: 0;
 .menu > li {
 margin: 0 1rem;
 overflow: hidden;
+font-size: 1.2em;
 }
 
 .menu-button-container {
@@ -138,7 +142,6 @@ max-width: 70%;
 display: flex;
 }
 .menu {
-position: absolute;
 top: 0;
 margin-top: 50px;
 left: 0;
@@ -242,7 +245,8 @@ display: flex;
         <header class="top-nav">
     <div>
         <a href="/">
-            <img src="/images/logo.png" alt="Lisa Funke" id="logo"/>
+            <!-- <img src="/images/logo.png" alt="Lisa Funke" id="logo"/> -->
+            <h1>Lisa Funke</h1>
         </a>
     </div>
     <input id="menu-toggle" type="checkbox" />
@@ -254,26 +258,13 @@ display: flex;
       <li><a href="#">observation</a></li>
       <li><a href="#">animation</a></li>
       <li><a href="#">visual development</a></li>
-      <li><a href="#about">about</a></li>
+      <li><a href="/about-contact">about/contact</a></li>
     </ul>
 </header>
         
-         
-
-        <section id="about">
-    <div>
-        <h1 class="highlight">about me</h1>
-        <p>Hi! My name is Lisa and I’m a french/german animation student at Gobelins.</p>
-
-<p>I’m currently interested in character design and background art though I enjoy exploring every aspect of the animation pipeline. When I’m not drawing, I bake huge amounts of cookies or read the cheesiest romance novels you could think of.</p>
-
-<p>Thanks for checking out my website :)</p>
-
-    </div>
-    <div class="picture">
-        <img src="/images/picture.png" alt="picture of Lisa Funke"/>
-    </div>
-</section>
+        
+    <h1>Da furzzzi cat</h1>
+ 
 
         <footer>
     <p>Coded with ❤ by <a href="//nicolasfunke.com" target="_blank">Nico</a></p>
