@@ -1,0 +1,206 @@
+---
+layout: default
+---
+
+<style>
+.widget_blog_subscription {
+  display: block;
+  margin: 50px auto;
+  width: 60%;
+  max-width: 490px;
+  min-width: 320px;
+  position: relative;
+  overflow: hidden;
+	background-color: #F6F6F2;
+  border-radius: 10px;
+}
+.widget_blog_subscription:after,
+.widget_blog_subscription:before {
+  content: '';
+  width: 100%;
+  height: 10px;
+  display: block;
+  background-image: repeating-linear-gradient(135deg, #f8dea3 0px, #f8dea3 15px, transparent 15px, transparent 25px, #1d1d1d 25px, #1d1d1d 40px, transparent 40px, transparent 50px);
+}
+
+.widget_blog_subscription p {
+  margin: 0;
+  text-align: left;
+}
+.widget_blog_subscription p:first-child {
+  margin: 30px 30px 15px;
+  color: #1d1d1d;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.widget_blog_subscription #subscribe-blog:before {
+    content: '';
+    background-image: url(/images/timbre.png);
+    background-repeat: no-repeat;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    display: block;
+    padding: 80px;
+    position: absolute;
+    top: 20px;
+    right: -23px;
+    color: rgba(242, 155, 145, 0.5);
+    font-size: 28px;
+    transform: rotate(12deg);
+    font-weight: 400;
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
+@media only screen and (max-device-width : 768px) {
+    .widget_blog_subscription #subscribe-blog:before {
+        display: none;
+    }
+}
+
+.widget_blog_subscription input[type="text"], .widget_blog_subscription textarea {
+  margin: 15px 30px;
+  font-family: 'Comfortaa', cursive;
+  color: #1d1d1d;
+  padding: 15px 0 !important;
+  text-align: left;
+  width: 100% !important;
+  max-width: calc(100% - 60px);
+  outline: none;
+  border: 0;
+  font-size: 14px;
+  background-color: transparent;
+  border-top: 1px solid #1d1d1d;
+  border-bottom: 1px solid #1d1d1d;
+}
+.widget_blog_subscription input[type="text"]::-webkit-input-placeholder {
+	color: #1d1d1d;
+}
+.widget_blog_subscription input[type="text"]:-moz-placeholder {
+	color: #1d1d1d;
+}
+.widget_blog_subscription input[type="text"]::-moz-placeholder {
+	color: #1d1d1d;
+}
+.widget_blog_subscription input[type="text"]:-ms-input-placeholder {
+	color: #1d1d1d;
+}
+.widget_blog_subscription input[type="submit"] {
+    font-family: 'Comfortaa', cursive;
+  margin: 15px 35px 25px;
+  background-color: #f8dea3;
+  color: #1d1d1d;
+  padding: 14px 18px !important;
+  text-align: center;
+  width: auto;
+  max-width: 70%;
+  outline: none;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: .1s all ease-in-out;
+  -moz-transition: .1s all ease-in-out;
+  -o-transition: .1s all ease-in-out;
+  transition: .1s all ease-in-out;
+}
+.widget_blog_subscription input[type="submit"]:hover {
+  background-color: #1d1d1d;
+  color:#fff;
+}
+
+/* Option B */
+.option-b.widget_blog_subscription {
+	background-color: #fffbf0;
+}
+.option-b.widget_blog_subscription:after,
+.option-b.widget_blog_subscription:before {
+  content: '';
+  width: 100%;
+  height: 10px;
+  display: block;
+  background-image: repeating-linear-gradient(135deg, #eb5f5f 0px, #eb5f5f 15px, transparent 15px, transparent 25px, #8ac26d 25px, #8ac26d 40px, transparent 40px, transparent 50px);
+}
+.option-b.widget_blog_subscription p:first-child {
+  color: #8ac26d;
+}
+.option-b.widget_blog_subscription input[type="text"] {
+  border-top: 1px solid #8ac26d;
+  border-bottom: 1px solid #8ac26d;
+}
+.option-b.widget_blog_subscription input[type="submit"] {
+  background-color: #8ac26d;
+  box-shadow: 0px 0px 0px 5px #8ac26d;
+}
+.option-b.widget_blog_subscription input[type="submit"]:hover {
+  background-color: #eb5f5f;
+  box-shadow: 0px 0px 0px 5px #eb5f5f;
+}
+.option-b.widget_blog_subscription #subscribe-blog:before {
+  content: '*-* *-* *';
+  width: auto;
+  height: auto;
+  display: block;
+  border: 2px solid rgba(138, 194, 109, 0.4);
+  padding: 4px;
+  position: absolute;
+  top: 36px;
+  right: -30px;
+  color: rgba(138, 194, 109, 0.4);
+  font-size: 28px;
+  transform: rotate(17deg);
+  font-weight: 400;
+  text-decoration: underline;
+  border-radius: 10px;
+}
+.option-b.widget_blog_subscription #subscribe-blog:after {
+  content: '*';
+  width: 50px;
+  height: 50px;
+  display: block;
+  border: 4px double rgba(138, 194, 109, 0.4);
+  padding: 10px;
+  position: absolute;
+  bottom: 30px;
+  right: -10px;
+  color: rgba(138, 194, 109, 0.4);
+  font-size: 120px;
+  transform: rotate(-30deg);
+  font-weight: 400;
+  border-radius: 99px;
+  text-align: center;
+  line-height: 94px;
+  vertical-align: middle;
+}
+</style>
+
+
+{% include about.html %}
+
+
+<section id="main">
+    <div class="container my-5 mt-5 mx-5 px-5" style="flex-direction: column;">
+        <section class="widget widget_blog_subscription">
+          <form method="post" netlify-honeypot="bot-field" netlify id="subscribe-blog">
+            <p>Contact me.</p>
+            <p>
+              <input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder="Enter your email address" type="email" autocomplete="email" id="subscribe-field" required>
+            </p>
+            <p>
+                <textarea style="width: 95%; padding: 1px 2px" placeholder="Unleash your inner Shakespeare" required></textarea>
+              </p>
+              <p style="display: none;">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
+            <p>
+              <input type="submit" value="send!">
+            </p>
+          </form>
+        </section>
+    </div>
+</section>
