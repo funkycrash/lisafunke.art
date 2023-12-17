@@ -39,7 +39,7 @@ webp:
 collections:
   - name: portfolio
     label: Portfolio
-    folder: _observation
+    folder: _portfolio
     create: true
     slug: "{{slug}}"
     fields:
