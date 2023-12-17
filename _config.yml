@@ -38,9 +38,5 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 collections:
-  observation:
-    output: false
-  animation:
-    output: false
-  visualdevelopment:
+  portfolio:
     output: false
