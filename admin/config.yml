@@ -37,53 +37,9 @@ webp:
   # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
   append_ext: false
 collections:
-  - name: observation
-    label: Observation
+  - name: portfolio
+    label: Portfolio
     folder: _observation
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Title, name: title, widget: string, tagname: h1 }
-      - {
-          label: Priority,
-          name: priority,
-          widget: number,
-          default: 0,
-          min: 0,
-          max: 1000,
-          step: 1,
-        }
-      - {
-          label: "Thumbnail Image",
-          name: thumbnailImage,
-          description: "must be 480x360",
-          widget: image
-        }
-  - name: animation
-    label: Animation
-    folder: _animation
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Title, name: title, widget: string, tagname: h1 }
-      - {
-          label: Priority,
-          name: priority,
-          widget: number,
-          default: 0,
-          min: 0,
-          max: 1000,
-          step: 1,
-        }
-      - {
-          label: "Thumbnail Image",
-          name: thumbnailImage,
-          description: "must be 480x360",
-          widget: image
-        }
-  - name: visualdevelopment
-    label: "Visual Development"
-    folder: _visualdevelopment
     create: true
     slug: "{{slug}}"
     fields:

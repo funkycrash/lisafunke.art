@@ -1,8 +1,3 @@
 ---
 layout: default
 ---
-
-{% assign content = site.observation | sort:"priority" | reverse %} 
-{% for item in content %}
-    <h1>{{ item.title }}</h1>
-{% endfor %}
