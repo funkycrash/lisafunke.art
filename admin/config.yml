@@ -36,7 +36,7 @@ webp:
   # append '.webp' to filename after original extension rather than replacing it.
   # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
   append_ext: false
-collections:
+portfolio:
   - name: portfolio
     label: Portfolio
     folder: _observation
