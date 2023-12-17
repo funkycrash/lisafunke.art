@@ -69,5 +69,6 @@ collections:
           fields:
             [
               { label: About, name: about, widget: markdown },
+              { label: Demoreel, name: demoreel, widget: string },
             ],
         }
