@@ -69,6 +69,6 @@ portfolio:
           fields:
             [
               { label: About, name: about, widget: markdown },
-              { label: Demoreel, name: demoreel, widget: string, description: ID de la video Youtube (exemple: bX6iT83vvyM) },
+              { label: Demoreel, name: demoreel, widget: string, description: "ID de la video Youtube (exemple: bX6iT83vvyM)" },
             ],
         }
