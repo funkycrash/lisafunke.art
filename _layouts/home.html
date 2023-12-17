@@ -4,20 +4,17 @@ layout: default
 
 <section id="main">
 
-    <div class="grid-container">
-        {% assign content = site.portfolio | sort:"priority" | reverse %}
-        {% for item in content %}
-        <h1>{{ portfolio.title }}</h1>
-        {% endfor %}
-        <div>
-            <!-- <p>click to discover</p><img src="/images/home/fleche.png" alt="click to discover" width="80px" /> -->
+    <div class="container">
+        {% assign portfolioByPriority = site.portfolio | sort:"priority" %}
+        {% for item in portfolioByPriority %}
+        <div class="text-center">
+            <h1>{{ item.title }}</h1>
+            <br />
+            <div class="container">
+                <img src="{{item.thumbnailImage}}" loading="lazy" />
+            </div>
+            {% endfor %}
+            <div>
+            </div>
         </div>
-    </div>
-    <div class="grid-container">
-        <!-- <div><a href="#"><img src="/images/home/IconAnim.png" alt="animation" /></a></div> -->
-        <!-- <div><a href="#"><img src="/images/home/IconVisdev.png" alt="visual development" /></a></div> -->
-    </div>
-    <div class="grid-container">
-        <!-- <div><a href="#"><img src="/images/home/IconObs.png" alt="observation" /></a></div> -->
-    </div>
 </section>
