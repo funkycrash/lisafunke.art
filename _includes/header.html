@@ -10,8 +10,8 @@
     <div class='menu-button'></div>
   </label>
   <ul class="menu">
-    <li><a href="/">portfolio</a></li>
-    <li><a href="/demoreel">demoreel</a></li>
-    <li><a href="/about-contact">about/contact</a></li>
+    <li><a href="/" class="{% if page.layout == 'home' %}active{% endif %}">portfolio</a></li>
+    <li><a href="/demoreel" class="{% if page.layout == 'demoreel' %}active{% endif %}">demoreel</a></li>
+    <li><a href="/about-contact" class="{% if page.layout == 'contact' %}active{% endif %}">about/contact</a></li>
   </ul>
 </header>
