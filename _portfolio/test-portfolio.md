@@ -1,5 +1,5 @@
 ---
-title: Test portfolio
+title: Ghost Hunter Boy
 priority: 1
-thumbnailImage: /images/uploads/il_794xn.1803249808_puql.jpg
+thumbnailImage: /images/uploads/vis_dev-2.png
 ---
