@@ -3,11 +3,6 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-p,
-a {
-  font-family: 'Comfortaa', cursive;
-}
-
 a {
   text-decoration: none;
   color: #1d1d1d;
@@ -30,8 +25,17 @@ body {
 }
 
 * {
-  font-family: 'Raleway';
+  font-family: 'Comfortaa';
   box-sizing: border-box;
+}
+
+p,
+a {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+strong {
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .top-nav {
