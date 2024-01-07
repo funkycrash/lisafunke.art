@@ -186,15 +186,6 @@ section {
   display: flex;
 }
 
-#about div.picture {
-  display: flex;
-  justify-content: center;
-}
-
-#about img {
-  max-width: 300px;
-}
-
 .grid-container {
   display: flex;
   flex-wrap: wrap;

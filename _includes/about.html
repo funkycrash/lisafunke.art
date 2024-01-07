@@ -1,11 +1,12 @@
 <div class="container">
-    <section id="about">
-        <div>
+
+    <section id="about" class="flex-row">
+        <div class="flex-large">
             <h1 class="highlight">about me</h1>
             {{ site.data.content.about | markdownify }}
         </div>
-        <div class="picture">
-            <img src="/images/picture.png" alt="picture of Lisa Funke" />
+        <div class="flex-large text-center">
+            <img src="/images/picture.jpg" alt="picture of Lisa Funke" />
         </div>
     </section>
 </div>
