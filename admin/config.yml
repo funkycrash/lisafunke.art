@@ -59,6 +59,18 @@ collections:
           description: "must be 480x360",
           widget: image
         }
+      - label: "Additional Images"
+        name: images
+        description: "Add multiple images for this portfolio item"
+        widget: list
+        fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: Caption
+            name: caption
+            widget: string
+            required: false
   - label: Content
     name: content
     files:

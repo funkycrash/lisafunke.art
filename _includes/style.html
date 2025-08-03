@@ -229,4 +229,42 @@
   #about img {
     max-width: 300px;
   }
+
+  /* Styles pour les images supplémentaires du portfolio */
+  .additional-images {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .image-container {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-caption {
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+  }
+
+  @media (max-width: 700px) {
+    .additional-images {
+      gap: 1rem;
+    }
+    
+    .image-caption {
+      font-size: 0.8em;
+    }
+  }
 </style>

@@ -13,8 +13,19 @@ layout: default
             <div class="container">
                 <img src="{{item.thumbnailImage}}" class="responsive-image" loading="lazy" />
             </div>
-            {% endfor %}
-            <div>
+            
+            {% if item.images %}
+            <div class="additional-images">
+                {% for image in item.images %}
+                <div class="image-container">
+                    <img src="{{image.image}}" class="responsive-image" loading="lazy" />
+                    {% if image.caption %}
+                    <p class="image-caption">{{image.caption}}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
             </div>
+            {% endif %}
         </div>
+        {% endfor %}
 </section>
