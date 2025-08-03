@@ -8,7 +8,7 @@ layout: default
         {% assign portfolioByPriority = site.portfolio | sort:"priority" %}
         {% for item in portfolioByPriority %}
         <div class="text-center">
-            <h1>{{ item.title }}</h1>
+            <h1 class="project-title">{{ item.title }}</h1>
             <br />
             <div class="container">
                 <img src="{{item.thumbnailImage}}" class="responsive-image" loading="lazy" />
