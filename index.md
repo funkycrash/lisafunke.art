@@ -1,5 +1,5 @@
 ---
 layout: home
-title: 'Lisa Funke - Animation Student in Paris @ Gobelins'
+title: 'Lisa Funke - Layout & Animation / Gobelin Alumn'
 permalink: /
 ---
